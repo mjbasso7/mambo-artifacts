@@ -1,0 +1,23 @@
+uni,2,3,kb,16,0.0003,0.0008,0.0011,3,True | peakMB=239 | wall=2.1 | OK
+gb,2,3,kb,16,0.0078,0.0110,0.0188,16,dim=16(=D_I) | peakMB=241 | wall=2.1 | OK
+uni,2,5,kb,256,0.0030,0.0113,0.0143,2,True | peakMB=240 | wall=2.0 | OK
+uni,2,7,kb,4096,0.0009,3.5457,3.5466,2,True | peakMB=249 | wall=5.5 | OK
+uni,2,8,kb,16384,0.0014,31.3507,31.3522,1,True | peakMB=318 | wall=32.8 | OK
+gb,2,4,kb,64,0.0060,0.0147,0.0207,64,dim=64(=D_I) | peakMB=240 | wall=1.6 | OK
+gb,2,5,kb,256,0.0074,0.0092,0.0165,256,dim=256(=D_I) | peakMB=241 | wall=1.7 | OK
+gb,2,6,kb,1024,0.0065,0.0094,0.0158,1024,dim=1024(=D_I) | peakMB=241 | wall=1.6 | OK
+gb,3,3,kb,64,0.0057,0.0083,0.0140,64,dim=64(=D_I) | peakMB=241 | wall=1.5 | OK
+uni,2,5,bn254,256,0.0007,0.5399,0.5406,1,True | peakMB=258 | wall=2.0 | OK
+gb,2,3,bn254,16,0.0206,0.0003,ERR,0,NotImplementedError('unsupported base field: Finite Field of | peakMB=241 | wall=1.5 | ERR(rc=1)
+gb,2,3,pm,16,0.0054,0.0083,0.0137,16,True | peakMB=242 | wall=1.5 | OK
+gb,3,3,pm,64,0.0055,0.0083,0.0139,64,True | peakMB=243 | wall=1.5 | OK
+gb,2,7,kb,4096,0.0062,0.0092,0.0154,4096,dim=4096(=D_I) | peakMB=241 | wall=1.5 | OK
+gb,2,8,kb,16384,0.0057,0.0100,0.0157,16384,dim=16384(=D_I) | peakMB=241 | wall=1.5 | OK
+gb,3,4,kb,512,0.0056,0.0085,0.0141,512,dim=512(=D_I) | peakMB=241 | wall=1.5 | OK
+gb,3,5,kb,4096,0.0056,0.0089,0.0145,4096,dim=4096(=D_I) | peakMB=241 | wall=1.5 | OK
+gb,2,6,pm,1024,0.0059,0.0087,0.0146,1024,True | peakMB=251 | wall=1.8 | OK
+gb,2,8,pm,,,,,,KILLED | peakMB=? | wall=600.0 | DNF>600s
+gb,3,4,pm,512,0.0072,0.0112,0.0185,512,True | peakMB=258 | wall=2.0 | OK
+ | peakMB=? | wall=137.0 | ERR(rc=143)
+uni,2,9,kb,,,,,,KILLED | peakMB=? | wall=600.0 | DNF>600s
+gb,2,7,pm,4096,0.0065,0.0104,0.0169,277.0,dim=4096(=D_I)/verified | peakMB=277 | wall=44.5 | OK

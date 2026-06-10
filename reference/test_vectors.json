@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "permutation": "Mambo",
+    "t": 2,
+    "n_rounds": 33,
+    "phi": 7,
+    "round_constants_source": "RC_C and RC_D generic 65-element u64 tables (values < 2^31, valid mod every supported field prime); see reference/round_constants.md",
+    "recurrence": "theta_{i+1} = phi*theta_i + psi_i^2 + RC_C[i mod 65]; psi_{i+1} = phi*psi_i + theta_{i+1}^2 + RC_D[i mod 65]",
+    "fields": [
+      "BabyBear (p=2^31-2^27+1)",
+      "KoalaBear (p=2^31-2^24+1)",
+      "Mersenne31 (p=2^31-1)",
+      "Goldilocks (p=2^64-2^32+1)",
+      "BN254 scalar (p=21888242871839275222246405745257275088548364400416034343698204186575808495617)",
+      "Stark252 (p=2^251 + 17*2^192 + 1)"
+    ],
+    "hex_format": "canonical residue mod p, lowercase hex with 0x prefix (Bn254 uses Debug repr)"
+  },
+  "input_set": [
+    {
+      "theta": 1,
+      "psi": 2
+    },
+    {
+      "theta": 0,
+      "psi": 0
+    },
+    {
+      "theta": 1,
+      "psi": 0
+    },
+    {
+      "theta": 0,
+      "psi": 1
+    },
+    {
+      "theta": 42,
+      "psi": 1729
+    },
+    {
+      "theta": 12345,
+      "psi": 67890
+    },
+    {
+      "theta": 1000000,
+      "psi": 999999
+    },
+    {
+      "theta": 2147483647,
+      "psi": 2147483646
+    }
+  ],
+  "outputs_by_field": {
+    "BabyBear": [
+      {
+        "theta_in": 1,
+        "psi_in": 2,
+        "theta_out": "0x4d5f8a3b",
+        "psi_out": "0x375d3f8"
+      },
+      {
+        "theta_in": 0,
+        "psi_in": 0,
+        "theta_out": "0x12998602",
+        "psi_out": "0x1d9077b"
+      },
+      {
+        "theta_in": 1,
+        "psi_in": 0,
+        "theta_out": "0x557a7fde",
+        "psi_out": "0x433d541d"
+      },
+      {
+        "theta_in": 0,
+        "psi_in": 1,
+        "theta_out": "0x33907597",
+        "psi_out": "0x309d7517"
+      },
+      {
+        "theta_in": 42,
+        "psi_in": 1729,
+        "theta_out": "0x641e352c",
+        "psi_out": "0x472fbe88"
+      },
+      {
+        "theta_in": 12345,
+        "psi_in": 67890,
+        "theta_out": "0x649d7570",
+        "psi_out": "0x3b8b4b63"
+      },
+      {
+        "theta_in": 1000000,
+        "psi_in": 999999,
+        "theta_out": "0x5c784b06",
+        "psi_out": "0x70c88a4e"
+      },
+      {
+        "theta_in": 2147483647,
+        "psi_in": 2147483646,
+        "theta_out": "0x21115903",
+        "psi_out": "0x4e176763"
+      }
+    ],
+    "KoalaBear": [
+      {
+        "theta_in": 1,
+        "psi_in": 2,
+        "theta_out": "0x70c776f2",
+        "psi_out": "0x2f571903"
+      },
+      {
+        "theta_in": 0,
+        "psi_in": 0,
+        "theta_out": "0x39407464",
+        "psi_out": "0x5856c00e"
+      },
+      {
+        "theta_in": 1,
+        "psi_in": 0,
+        "theta_out": "0x3efc6d02",
+        "psi_out": "0x4c2367d3"
+      },
+      {
+        "theta_in": 0,
+        "psi_in": 1,
+        "theta_out": "0x4acd051e",
+        "psi_out": "0x237f7c21"
+      },
+      {
+        "theta_in": 42,
+        "psi_in": 1729,
+        "theta_out": "0x272a43e9",
+        "psi_out": "0x1840f382"
+      },
+      {
+        "theta_in": 12345,
+        "psi_in": 67890,
+        "theta_out": "0x3310d893",
+        "psi_out": "0x149d1d5"
+      },
+      {
+        "theta_in": 1000000,
+        "psi_in": 999999,
+        "theta_out": "0x22cde81f",
+        "psi_out": "0x49dc9a6"
+      },
+      {
+        "theta_in": 2147483647,
+        "psi_in": 2147483646,
+        "theta_out": "0x5539b6e6",
+        "psi_out": "0x4834edcb"
+      }
+    ],
+    "Mersenne31": [
+      {
+        "theta_in": 1,
+        "psi_in": 2,
+        "theta_out": "0x35e0970a",
+        "psi_out": "0x734119c"
+      },
+      {
+        "theta_in": 0,
+        "psi_in": 0,
+        "theta_out": "0x6ff22c67",
+        "psi_out": "0x69be041a"
+      },
+      {
+        "theta_in": 1,
+        "psi_in": 0,
+        "theta_out": "0x58b9294b",
+        "psi_out": "0x6fafb5ee"
+      },
+      {
+        "theta_in": 0,
+        "psi_in": 1,
+        "theta_out": "0x398f9014",
+        "psi_out": "0x527a26ec"
+      },
+      {
+        "theta_in": 42,
+        "psi_in": 1729,
+        "theta_out": "0x3354b7df",
+        "psi_out": "0x6d1c85c9"
+      },
+      {
+        "theta_in": 12345,
+        "psi_in": 67890,
+        "theta_out": "0x63318a18",
+        "psi_out": "0x72276fd6"
+      },
+      {
+        "theta_in": 1000000,
+        "psi_in": 999999,
+        "theta_out": "0x7f0c487d",
+        "psi_out": "0x1e9eb792"
+      },
+      {
+        "theta_in": 2147483647,
+        "psi_in": 2147483646,
+        "theta_out": "0x17675e07",
+        "psi_out": "0x1b700e41"
+      }
+    ],
+    "Goldilocks": [
+      {
+        "theta_in": 1,
+        "psi_in": 2,
+        "theta_out": "0xce8a31627f337116",
+        "psi_out": "0x7b3b806be064a1f0"
+      },
+      {
+        "theta_in": 0,
+        "psi_in": 0,
+        "theta_out": "0x840f5c0790a108c",
+        "psi_out": "0x4e853f517bb0900e"
+      },
+      {
+        "theta_in": 1,
+        "psi_in": 0,
+        "theta_out": "0xbd46d918c4f23cf5",
+        "psi_out": "0x1f3b980b8fa7c378"
+      },
+      {
+        "theta_in": 0,
+        "psi_in": 1,
+        "theta_out": "0x7b0cb655dae80d0e",
+        "psi_out": "0x3ed9eecd949ad3c0"
+      },
+      {
+        "theta_in": 42,
+        "psi_in": 1729,
+        "theta_out": "0xfdd1cc50b7588af4",
+        "psi_out": "0x90abd728a48cc7f6"
+      },
+      {
+        "theta_in": 12345,
+        "psi_in": 67890,
+        "theta_out": "0x1bc1c8441f6fb5b6",
+        "psi_out": "0x77cc0df57c0b4f12"
+      },
+      {
+        "theta_in": 1000000,
+        "psi_in": 999999,
+        "theta_out": "0x35edcde5feb5899e",
+        "psi_out": "0x72a488b6da3c3b16"
+      },
+      {
+        "theta_in": 2147483647,
+        "psi_in": 2147483646,
+        "theta_out": "0x91f3aac07c33b2ad",
+        "psi_out": "0x1cba93021bc6e338"
+      }
+    ],
+    "BN254": [
+      {
+        "theta_in": 1,
+        "psi_in": 2,
+        "theta_out": "16662898581495932919973610472275331693400672534363550483691862568625612884672",
+        "psi_out": "11695432547540785514198622833774923530910426914798722240883791006628152680713"
+      },
+      {
+        "theta_in": 0,
+        "psi_in": 0,
+        "theta_out": "5608411258033984867765409035851200529975624728402778742081475460512460811560",
+        "psi_out": "9122546072497658022961939276843584705851774706072932015201581021043553042138"
+      },
+      {
+        "theta_in": 1,
+        "psi_in": 0,
+        "theta_out": "5728604351091775029399479112735917833452807023506476556256135267769885006441",
+        "psi_out": "8096868932566655504960906363469099610177240338106467265313438161505133280708"
+      },
+      {
+        "theta_in": 0,
+        "psi_in": 1,
+        "theta_out": "11010896221981571835506169288315860255360889156309355278740066106889996263438",
+        "psi_out": "15564985259907477526748182449915743631276171063160684000423384928127315435421"
+      },
+      {
+        "theta_in": 42,
+        "psi_in": 1729,
+        "theta_out": "15474394219230534712492965053816511819807009360394327148394809987594844625968",
+        "psi_out": "14066554181857009204517624550668238222539678031454699742723704082396085927325"
+      },
+      {
+        "theta_in": 12345,
+        "psi_in": 67890,
+        "theta_out": "9878740810948227745805908351643103679596453476143159972569818628104075861912",
+        "psi_out": "603782906212013977189766613216785059489493259901488477348090671301429847360"
+      },
+      {
+        "theta_in": 1000000,
+        "psi_in": 999999,
+        "theta_out": "21027967483601223507955722847861861801903572028960788581303768149571593571629",
+        "psi_out": "719120909779637548364723827434271341764425426923184666701771364438245429874"
+      },
+      {
+        "theta_in": 2147483647,
+        "psi_in": 2147483646,
+        "theta_out": "17133548681943780943806337396071225201278484215211302837497490208067163513406",
+        "psi_out": "9098728321242426796519096658973402264292339101892304623082598483088087186331"
+      }
+    ],
+    "Stark252": [
+      {
+        "theta_in": 1,
+        "psi_in": 2,
+        "theta_out": "0x422ae2d8055e8fd6fbf0746ba0ab34afee9dc56ddc59467540dd4773fe9df2",
+        "psi_out": "0x11155449bd8f3afa0155cdfd04000f428b6fe5c474bdde7b8578f7d942f1c1a"
+      },
+      {
+        "theta_in": 0,
+        "psi_in": 0,
+        "theta_out": "0x312da473dc6e80e8b609574853e6586463d9385db40b3f103ae843b62dda308",
+        "psi_out": "0x14b28d5f7a9b0013cf77accd11e82c1599647fd711ae822c7103d29d1d74801"
+      },
+      {
+        "theta_in": 1,
+        "psi_in": 0,
+        "theta_out": "0x7245a24b5e40c369dff728a2581402d4db78a436096b1181ff720a764c31bdb",
+        "psi_out": "0x54c476048b43b13aaa6928922afe0f36dd16969d8b8e6997cd0dbb3d8033b0a"
+      },
+      {
+        "theta_in": 0,
+        "psi_in": 1,
+        "theta_out": "0x7abf83c6831e4b2c0b240269fa976bd872961a2f04d8b709d32a7ef736f18d",
+        "psi_out": "0x3440c93aabb69320205b46ffc3987c5d451d77a1355c101ad401c2761198c7a"
+      },
+      {
+        "theta_in": 42,
+        "psi_in": 1729,
+        "theta_out": "0xc50e185ca4f891bdcc48d29f6260129d10262f90230561db039cb2307945cc",
+        "psi_out": "0x30fdc1c6feaaeaf7a31f9be4408109798cb98f760a074bb073460d7663da9ce"
+      },
+      {
+        "theta_in": 12345,
+        "psi_in": 67890,
+        "theta_out": "0x592f42adb4f69838fce1278403d2cace3c22933d718f8b3722f2ab6856ec596",
+        "psi_out": "0x1685ad3c31ebb1fd56ed29cad1df43086eeb07ae2c2bd88d07e743b7e4130c0"
+      },
+      {
+        "theta_in": 1000000,
+        "psi_in": 999999,
+        "theta_out": "0x2fcd72f5665b289b5a3cbd54c6037cd6606a3287590f6011972a304bd59b26e",
+        "psi_out": "0x77c3212bff3ec35b02e25b201b4062e537ea89cb5ffde4613a5c4da4989d80a"
+      },
+      {
+        "theta_in": 2147483647,
+        "psi_in": 2147483646,
+        "theta_out": "0x3c46290a09fa1a38a9eea1737316e2078313bedf6963b99c985a53ed7a80911",
+        "psi_out": "0x585cd8f276f73da3cce390a08e4c9b26bee96294080add1d7f01173d96c8ecd"
+      }
+    ]
+  }
+}
