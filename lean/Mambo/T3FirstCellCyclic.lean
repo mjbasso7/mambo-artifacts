@@ -18,8 +18,8 @@ of this ideal matches the paper formula `3n - 1`, but the
 `Module.finrank` is INFINITE without additional structure. The paper
 formula corresponds to the d_reg of the ideal under the implicit
 **cyclicity reduction** — the K[X]-module structure on the quotient
-via x ↦ s_{2,0}-multiplication is cyclic at production widths (T44/T45
-sage-verified, project memory `project_cyclicity_universal_t234`), so
+via x ↦ s_{2,0}-multiplication is cyclic at production widths (sage-verified),
+so
 `s_{1,0}` is expressible as a polynomial in `s_{2,0}`. Concretely, this
 is equivalent to adding the relation `s_{1,0} - s_{2,0} = 0` (or any
 other primitive relation that pins down a single CICO unknown).

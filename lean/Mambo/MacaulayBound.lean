@@ -88,7 +88,7 @@ def numVars (t n : Nat) : Nat := t * (n + 1) + 1
     The t = 2, 3, 4 cases match the formula
     `t·n − (t − 1)(t − 2) / 2` (cf. `Mambo.T3HilbertSeries.production_d_reg`),
     valid at production widths only (universal extrapolation refuted
-    at t ≥ 5 per memory `project_mambo_regime_boundary_t4_vs_t5`). -/
+    at t ≥ 5). -/
 def d_reg (t n : Nat) : Nat :=
   if t = 2 then 2 * n
   else if t = 3 then 3 * n - 1

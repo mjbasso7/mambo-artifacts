@@ -22,10 +22,16 @@ For j in [0, t * max_rounds):
 
 ## Indexing
 
-For t=2 (original):
-- `c[i] = constants[i]` for i in [0, max_rounds)
-- `d[i] = constants[max_rounds + i]` for i in [0, max_rounds)
-  Note: historical — the c and d constants are stored separately in back-to-back blocks.
+For t=2 (canonical DERIVE-FRESH scheme — matches the Python reference): a
+permutation of N rounds derives 2N fresh constants:
+- `c[i] = h_i`        for i in [0, N)
+- `d[i] = h_{N + i}`  for i in [0, N)
+
+No cycling. The d-series offset equals N, so the constant SET is N-DEPENDENT:
+the constants for N=82 are NOT an extension of the N=65 set (the d block shifts).
+A hardcoded RC table is therefore specific to one N; the deployed L1 cell is
+N=82. The earlier scheme cycled a fixed 65-entry table (d-offset pinned to 65)
+mod 65 — it coincides with derive-fresh only at exactly N=65.
 
 For t >= 3:
 - `constants[r*t + i]` = constant for element i at round r

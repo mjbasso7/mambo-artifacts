@@ -216,7 +216,7 @@ def main():
     # Configuration 2: Goldilocks prime  p = 2^64 - 2^32 + 1
     # ---------------------------------------------------------------
     p_goldilocks = (1 << 64) - (1 << 32) + 1
-    phi_goldilocks = 16032412539219608744
+    phi_goldilocks = 7
     assert p_goldilocks == 18446744069414584321
     compute_vectors(
         "Configuration 2: Goldilocks Prime  p = 2^64 - 2^32 + 1",

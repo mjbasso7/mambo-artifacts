@@ -122,7 +122,8 @@ def mambo_t2_run(theta0: int, psi0: int, phi: int, p: int, n: int) -> State:
     """
     Apply n Mambo t=2 steps using sympy field arithmetic and functools.reduce.
     """
-    cs, ds = derive_rcs(max(n, 65), p)
+    # Canonical derive-fresh: 2n constants for an n-round permutation, d-offset=n.
+    cs, ds = derive_rcs(n, p)
     F, lift = make_gf(p)
     state = State(theta0 % p, psi0 % p)
     rc_pairs = list(zip(cs[:n], ds[:n]))
@@ -229,12 +230,11 @@ KOALABEAR_KAT = [
 # 2-to-1 sponge). Sponge is 2-to-1 compression: H(m1, m2) = sponge_run(...)
 # Format: (label, m1, m2, n, expected_theta, expected_psi)
 # n=65 is the t=2 analysis-minimum / falsification-target cell. The recommended
-# t=2 L1 deployment cell is n=82 (+25% margin); a cross-impl KAT at n=82 is
-# DEFERRED because the two t=2 RC schemes diverge past the 65-entry table:
-# the derive-fresh scheme derives 2n fresh constants, while the modular-cycle
-# scheme cycles RC modulo 65. They agree only for n<=65; pinning one canonical
-# scheme for n>65 is pending a round-constant-scheme decision (see the artifact
-# README known-gap note).
+# t=2 L1 deployment cell is n=82 (+25% margin). Canonical RC scheme is
+# DERIVE-FRESH: an n-round permutation uses 2n fresh constants with d-offset=n
+# (matches test_vectors.py). The in-circuit backends embed the derive-fresh
+# table at the deployed n=82 cell; the legacy cycle-mod-65 with d-offset pinned
+# to 65 coincided with derive-fresh only at exactly n=65.
 SPONGE_KAT = [
     (
         "sponge_42_99_n65_min", 42, 99, 65,

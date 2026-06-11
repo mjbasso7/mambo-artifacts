@@ -123,8 +123,7 @@ example : Fintype.card (VarIndex 3 5) = 18 := by
     at t = 5 (n = 2, 3) and t = 6 (n = 2) measured d_reg = 5n − 3,
     6n − 4 — incompatible with the `(t − 1)(t − 2) / 2` extrapolation.
     The formula is **only valid at production widths t ∈ {2, 3, 4}**,
-    consistent with the t = 4 / t ≥ 5 regime boundary noted in project
-    memory `project_mambo_regime_boundary_t4_vs_t5`. The 3 instance
+    consistent with the t = 4 / t ≥ 5 regime boundary. The 3 instance
     theorems below remain correct at their respective t.
 
     The `(t − 1)(t − 2)/2` correction term captures the additional

@@ -8,7 +8,7 @@ import Mambo.UniversalQ
 Lean 4 corollary file for the t = 4 universal-in-n HS theorem
 (empirical anchors: 6 cells n = 3..8 over F_257, bit-exact).
 
-**Empirical claim (project memory `project_t4_hilb_theorem.md`):**
+**Empirical claim:**
 
   HS_{R/I}(z) = (1 + z)^{4n − 9} · Q_4(z)   at width t = 4, n ≥ 3
 
@@ -19,14 +19,13 @@ Lean 4 corollary file for the t = 4 universal-in-n HS theorem
   ⇒  d_reg = 4n − 3                (HS degree + 1 = (4n−9)+5+1)
 
 This file captures the **dimension-level** corollaries: the HS-factor
-count at t = 4 is `4n − 9` and the quintic residue `Q_4` is the conjectured
-2026-05-16 cross-validated universal-in-n residue at t = 4
-(`project_mambo_q4_galois_s5_cross_validated.md`).
+count at t = 4 is `4n − 9` and the quintic residue `Q_4` is the
+cross-validated universal-in-n residue at t = 4.
 
 The **semantic** content — that the Mambo coupled-quadratic ideal at
 t = 4 has this exact HS factorisation — is the universal-Q claim
-(retracted across t ≥ 5 per `project_universal_q_t4_specific.md`, but
-holds at t = 4 across n ≥ 3 with the 6-cell empirical anchor).
+(retracted across t ≥ 5, but holds at t = 4 across n ≥ 3 with the
+6-cell empirical anchor).
 
 Anchor cells (matches kbase under decide):
 - n = 3: HS sum = 2^9   = 512

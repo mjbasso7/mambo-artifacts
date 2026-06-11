@@ -76,6 +76,7 @@ round count and `t` the state width.
 | Staircase classification + numerator-residue reconstruction | `sage analysis/hilbert_residue_staircase.sage` |
 | Large-n Hilbert series | `sage analysis/syzygy_hunt_sage/mambo_hs_large_n.sage` |
 | Universal-Q window membership | `sage analysis/q4_window_membership.sage` |
+| Universal-Q residue with generic window initialization (Q_4 theorem) | `sage analysis/q4_window_generic_init.sage` |
 | Non-telescoping verification | `sage analysis/nontelescoping_verify.sage` |
 
 ### Colength (= 2·D_I = 2^{tn−(t−1)})
@@ -91,6 +92,7 @@ round count and `t` the state width.
 |---|---|
 | `D_eff` specialization analysis | `sage analysis/widet_specialization.sage`, `sage analysis/widet_specialization_adversarial.sage` |
 | `D_eff` proof verification | `sage analysis/widet_deff_proof_verify.sage` |
+| Multi-block chaining-value specialization (Section 5.12) | `sage analysis/multiblock_chaining.sage` |
 
 ### Monodromy / squarefreeness certificates ("no exploitable structure")
 
@@ -134,6 +136,7 @@ round count and `t` the state width.
 | Test-vector generator | `python3 reference/test_vectors.py` |
 | Test-vector data | `reference/test_vectors.json`, `reference/test/test_vectors.json`, `reference/test/parity_vectors_bn254.json` |
 | Round-constant specification | `reference/round_constants.md` |
+| Round-constant generator (canonical derive-fresh t=2 scheme) | `python3 reference/gen_rc_derivefresh.py [field] [n]` |
 
 ---
 
@@ -180,14 +183,16 @@ require Sage/Singular (and, for some larger cells, `msolve`) on the `PATH`.
 
 ## Known gaps and reproduction caveats
 
-- **t=2 cross-implementation KAT at the recommended cell (n = 82) is pending.**
-  The reference implementation here derives fresh round constants for every
-  round, whereas a modular-cycling round-constant scheme cycles a fixed
-  65-entry table. The two schemes agree for n ≤ 65 but diverge beyond it, so a
-  cross-implementation KAT at the recommended t=2 deployment cell n=82 is
-  deferred until a single canonical round-constant scheme is pinned for
-  n > 65. KATs at n ≤ 65 (including the t=2 analysis-minimum cell n=65) are
-  included and self-consistent.
+- **Canonical t=2 round-constant scheme is derive-fresh.** A permutation of N
+  rounds derives 2N fresh constants with the d-series offset equal to N, so the
+  constant set is N-dependent (the constants for N=82 are not an extension of
+  the N=65 set). This is the single canonical scheme across the reference
+  implementation, the generator (`reference/gen_rc_derivefresh.py`), and the
+  round-constant specification; the earlier modular-cycling 65-entry table
+  coincided with derive-fresh only at exactly N=65. KATs are included at the
+  analysis-minimum cell (n=65) and the recommended deployment cell (n=82). The
+  Goldilocks test vectors use the conforming multiplier phi=7, matching the
+  other supported fields.
 
 - **Recommended deployment cells carry a +25% margin over the analysis
   minimum.** Throughout, the *minimum* cells (t=2 n=65, t=3 n=44, t=4 n=34) are
