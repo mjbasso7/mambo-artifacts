@@ -206,3 +206,7 @@ require Sage/Singular (and, for some larger cells, `msolve`) on the `PATH`.
   `d_reg` constant offset is confirmed for t ≤ 5; for t ≥ 6 it is an open
   question pending a single large compute cell, as documented honestly in
   `analysis/widerstate_dreg_proof.md`.
+
+## Paper
+
+`paper/mambo_tosc_2026.tex` (+ compiled PDF) — the manuscript this artifact accompanies. The reproduction map below ties each claim to its script.
