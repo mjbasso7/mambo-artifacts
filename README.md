@@ -2,7 +2,7 @@
 
 This repository is the supplementary-materials artifact for the paper
 
-> **Mambo: Degree-Two Hashing for Zero-Knowledge Proof Systems**
+> **Mambo: A Coupled-Quadratic Permutation Family with Exact Algebraic Structure**
 
 It contains everything needed to independently reproduce the paper's
 structural and security claims: the machine-checked Lean 4 development, a
